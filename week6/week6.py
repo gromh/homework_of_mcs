@@ -1,3 +1,20 @@
+'''
+Thinking1 ： 什么是监督学习，无监督学习，半监督学习？
+  监督学习是有标签学习如线性回归，逻辑回归， SVM，决策树，朴素贝叶斯等
+  无监督学习是无标签学习有KMEANS，PCA等
+  半监督学习，是少量数据有标签，利用没有标签的数据来学习整个数据的结果
+Thinking2 ： K-means中的k值如何选取？
+    K越大分类越精细，但是可能误差很大。可以利用手肘法计算不同的K将损失函数找到拐点K值，也可以用Gap Statistic方法找到Gap（K）最大的K值
+Thinking3：bagging指什么?
+    将若干的弱分类器投票选出一个强分类器，用于解决过拟合问题，减少方差
+    boosting用于解决欠拟合
+Thinking4： 表征学习和半监督学习的区别？
+    表征学习是在数据中找到新特征，对数据进行精简
+    半监督学习是为了拓展数据，提高无标签数据的可利用性，增加数据
+'''
+
+
+
 import os
 import pickle
 from collections import defaultdict
