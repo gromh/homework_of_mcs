@@ -1,0 +1,22 @@
+Thinking1:在实际工作中，FM和MF哪个应用的更多，为什么?
+    FM更多，在真实场景中实际数据不只有rating数据或者行为数据还有许多隐特征或其他特征。MF不能很好的处理隐特征FM可以。同时FM比逻辑回归模型更进一步提取了交叉特征信息。
+Thinking2：FFM与FM有哪些区别？
+    FM只是对两个特征之间做相关，FFM对这两个特征中的每个类别都做了相关。每个特征对应的不是唯一的隐向量而是一组隐向量。
+Thinking3：DeepFM相比于FM解决了哪些问题，原理是怎样的？
+    FM只能解决二维特征交叉，一旦用到多维交叉算法参数过于多难以学习。DeepFM利用深度学习模型代替FM去学习更高维的交叉特征，在速度和准确度上都有很大的提高。
+Thinking4：Surprise工具中的baseline算法原理是怎样的？BaselineOnly和KNNBaseline有什么区别？
+    baseline算法是基于r = u + ui + uj 其中u是总体评分均值，ui是用户评分偏向， uj是物体评分偏向
+    KNNBaseline是对相似度最高的K个用户或者物品进行按相似度的评分加权平均得出预测其中评分r考虑到每个用户和商品得偏差
+    baseline是根据总体均值和用户偏见和商品偏见得到评分，KNNBaseline是根据相似的用户或者商品得到评分
+Thinking5：基于邻域的协同过滤都有哪些算法，请简述原理？
+    knns.KNNBasic：基础邻域协同过滤，利用相似度对相似得用户或商品进行加权平均得到评分
+    knns.KNNBasicWithMeans：对每个相似用户或商品评分时减去该用户评分均值，消去相似用户的个体影响，总体再加上用户u的均值
+    knns.KNNBasicWithZScore：对每个分数进行Z（r）用于得出标准化后的评分，最后结果进行逆标准化得到预测值
+    knns.KNNBaseline：计算r时使用baseline思想进行代替KNNBasiceWithMeans中的均值
+
+
+    
+
+
+
+
