@@ -1,0 +1,8 @@
+thinking1 什么是近似最近邻查找
+	快速查找模糊相似的K个样本，Minhash，SimHash，annoy, faiss，nmslib, falconn等
+thinking2 为什么两个集合的minhash值相同的概率等于这两个集合的Jaccard相似度
+	经过minhash后s1和s2之间有三种可能第三种对行为结果没有影响，1种 / （1种 + 2种）为相等概率，这个值就是jaccard相似度
+thinking3 SimHash在文本相似度的作用？
+	在文本向量化后设置某个阈值判断文本是否相似
+thinking4 youtobe采用期望观看时间作为评估指标？
+	出于业务的考虑，youtobe更在意视频的观看时长，并以此作为评估指标 
